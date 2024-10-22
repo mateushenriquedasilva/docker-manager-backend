@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,23 +27,23 @@ public class DockerContainerController {
         return dockerService.listContainers(showAll);
     }
 
-    @PostMapping("/{id}/create")
-    public void createContainer(@RequestParam String imageId) {
+    @PostMapping("/{imageId}/create")
+    public void createContainer(@PathVariable String imageId) {
         dockerService.createContainer(imageId);
     }
 
     @PostMapping("/{id}/start")
-    public void startContainer(@RequestParam String id) {
+    public void startContainer(@PathVariable String id) {
         dockerService.startContainer(id);
     }
 
     @PostMapping("/{id}/stop")
-    public void stopContainer(@RequestParam String id) {
+    public void stopContainer(@PathVariable String id) {
         dockerService.stopContainer(id);
     }
 
     @DeleteMapping("/{id}")
-    public void removeContainer(@RequestParam String id) {
+    public void removeContainer(@PathVariable String id) {
         dockerService.removeContainer(id);
     }
 }

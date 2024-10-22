@@ -20,13 +20,13 @@ public class DockerImagesController {
         this.dockerService = dockerService;
     }
 
-    @GetMapping
+    @GetMapping("")
     public List<Image> listImage() {
         return dockerService.listImages();
     }
 
     @GetMapping("/filter")
-    public Image filterImage(@RequestParam(required = false, defaultValue = "image-") String imageName) {
-        return dockerService.filterImage(imageName).get(0);
+    public List<Image> filterImage(@RequestParam(required = false, defaultValue = "image-") String imageName) {
+        return dockerService.filterImage(imageName);
     }
 }

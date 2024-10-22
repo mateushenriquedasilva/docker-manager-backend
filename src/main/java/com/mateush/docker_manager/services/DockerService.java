@@ -2,7 +2,7 @@ package com.mateush.docker_manager.services;
 
 import java.util.List;
 
-import org.jvnet.hk2.annotations.Service;
+import org.springframework.stereotype.Service;
 
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
