@@ -49,32 +49,6 @@ Este projeto é uma API desenvolvida em Java que lista os contêineres Docker em
 
     A API estará disponível em `http://localhost:8080`.
 
-## Endpoints
-
-- **GET /containers:** Lista todos os contêineres Docker em execução.
-
-    ```json
-    [
-      {
-        "id": "abc123",
-        "name": "my-container",
-        "status": "running"
-      }
-    ]
-    ```
-
-- **GET /containers/{id}:** Obter detalhes de um contêiner específico.
-
-    ```json
-    {
-      "id": "abc123",
-      "name": "my-container",
-      "status": "running",
-      "image": "my-image",
-      "ports": ["8080:80"]
-    }
-    ```
-
 ## Contribuição
 
 1. Faça um fork do projeto.
@@ -90,4 +64,3 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 ## Contato
 
 - **Autor:** Mateus Henrique da Silva
-- **E-mail:** [mateus@example.com](mailto:mateus@example.com)
