@@ -6,29 +6,18 @@ import org.springframework.stereotype.Service;
 
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
-import com.github.dockerjava.api.model.Image;
 
 @Service
-public class DockerService {
+public class DockerContainerService {
     private final DockerClient dockerClient;
 
-    public DockerService(DockerClient dockerClient) {
+    public DockerContainerService(DockerClient dockerClient) {
         this.dockerClient = dockerClient;
     }
 
     // list all containers
     public List<Container> listContainers(Boolean all) {
         return dockerClient.listContainersCmd().withShowAll(all).exec();
-    }
-
-    // list all images
-    public List<Image> listImages() {
-        return dockerClient.listImagesCmd().exec();
-    }
-
-    // list image by name
-    public List<Image> filterImage(String imageName) {
-        return dockerClient.listImagesCmd().withImageNameFilter(imageName).exec();
     }
 
     // create a container

@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.github.dockerjava.api.model.Container;
-import com.mateush.docker_manager.services.DockerService;
+import com.mateush.docker_manager.services.DockerContainerService;
 
 @RestController
 @RequestMapping("/api/containers")
 public class DockerContainerController {
-    private DockerService dockerService;
+    private DockerContainerService dockerService;
 
-    public DockerContainerController(DockerService dockerService) {
+    public DockerContainerController(DockerContainerService dockerService) {
         this.dockerService = dockerService;
     }
 
