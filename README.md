@@ -11,8 +11,12 @@ API that lists docker containers running on your machine 🐋
 Este projeto é uma API desenvolvida em Java que lista os contêineres Docker em execução na sua máquina, facilitando a gestão e monitoramento dos mesmos.
 
 ## Tecnologias Utilizadas
-
-- **Java:** 100%
+- **Spring Boot:** Framework para construção de aplicações Java.
+- **Docker Java API:** Biblioteca para interação com o Docker.
+- **Maven:** Ferramenta de automação de compilação e gerenciamento de dependências.
+- **JUnit:** Framework para testes unitários.
+- **Mockito:** Framework para criação de mocks em testes.
+- **Lombok:** Biblioteca para reduzir a verbosidade do código Java.
 
 ## Funcionalidades
 
