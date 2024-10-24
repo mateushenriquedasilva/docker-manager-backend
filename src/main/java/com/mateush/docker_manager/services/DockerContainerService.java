@@ -20,7 +20,7 @@ public class DockerContainerService {
         return dockerClient.listContainersCmd().withShowAll(all).exec();
     }
 
-    // create a container
+    // start a container
     public void startContainer(String containerId) {
         dockerClient.startContainerCmd(containerId).exec();
     }
